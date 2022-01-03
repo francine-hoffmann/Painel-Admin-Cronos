@@ -42,13 +42,15 @@ export function editarCurso(){
 
 export function deletarCurso({id}){
     let curso = cursos.find(c => c.id === id);
-    if (!curso){
-        console.error("Curso não encontrado");
-        return;
-    }
+    // if (!curso){
+    //     console.error("Curso não encontrado");
+    //     return;
+    // }
 
     let index = cursos.indexOf(curso);
-    cursos.splice(index, 1);
+    cursos.splice(1, index);
     localStorage.setItem('cursos', JSON.stringify(cursos));
 }
+
+export default deletarCurso
 

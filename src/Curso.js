@@ -1,3 +1,5 @@
+import deletarCurso from './CrudUtils'
+
 function Curso({nome,imagem,descricao,id}){
     const exibirFormulario = () => {
         let addCurso = document.querySelector(".addCurso");
@@ -15,8 +17,8 @@ function Curso({nome,imagem,descricao,id}){
             <td><img src={imagem} className="img-fluid" /></td>
             <td>{descricao}</td>
             <td>
-                <button className="btnEditar" onClick={exibirFormulario}>editar</button>
-                <button className="btnExcluir" >excluir</button>
+                <button className="btnEditar" onClick={exibirFormulario}> Editar</button>
+                <button className="btnExcluir" onClick={deletarCurso}> Excluir</button>
             </td>
         </tr>
     )
