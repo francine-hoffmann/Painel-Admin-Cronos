@@ -12,7 +12,6 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
 
     const deletar = () => {
         deletarCurso(id);
-        eventoRedraw();
     }
     
 
@@ -24,6 +23,7 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
             <td>
                 <button className="btnEditar" onClick={exibirFormularioEdicao}> editar</button>
                 <button className="btnExcluir" onClick={deletar}> excluir</button>
+
             </td>
         </tr>
     )
