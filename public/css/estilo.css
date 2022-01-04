@@ -56,7 +56,7 @@ h3 {
 .btnCancelar,
 .btnExcluir {
     background-color: #e90606;
-    border-color: #ca0101;
+    border-color: #a70000;
     text-transform: uppercase;
     margin: 0px 10px;
 
@@ -68,12 +68,14 @@ h3 {
 
 }
 
-.addCurso{
+.addCurso, .editarCurso{
     display: none;
 }
 
 label {
     width: 120px;
+    margin-top: 10px;
+
 }
 
 input {

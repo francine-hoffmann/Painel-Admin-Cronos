@@ -3,7 +3,7 @@
     "nome": "Desenvolvimento Web",
     "imagem": "imagens/ilustra-web.png",
     "descricao": "Consequatur debitis ipsa numquam illum placeat quod deleniti.",
-    "id": "ID 1",
+    "id": 1,
     "acoes": ""
     },
 
@@ -11,7 +11,7 @@
     "nome": "Marketing Digital",
     "imagem": "imagens/ilustra-marketing.png",
     "descricao": "Consequatur debitis ipsa numquam illum placeat quod deleniti.",
-    "id": "ID 2",
+    "id": 2,
     "acoes": ""
     },
    
@@ -19,7 +19,7 @@
     "nome": "Consultoria Ux",
     "imagem": "imagens/ilustra-ux.png",
     "descricao": "Consequatur debitis ipsa numquam illum placeat quod deleniti.",
-    "id": "ID 3",
+    "id": 3,
     "acoes": ""
     }
 ]

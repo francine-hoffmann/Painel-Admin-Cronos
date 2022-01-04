@@ -1,17 +1,19 @@
 import {criarCurso} from './CrudUtils';
 
 function FormularioCursos({eventoRedraw}) {
-  const evt = () => {
+  const adicionar = () => {
     criarCurso();
     eventoRedraw();
+    let addCursoForm = document.querySelector(".addCurso");
+    addCursoForm.style.display = "none";
   }
 
   const cancelar = () => {
-    let addCurso = document.querySelector(".addCurso");
-    addCurso.style.display = "none";
+    let addCursoForm = document.querySelector(".addCurso");
+    addCursoForm.style.display = "none";
   }
 
-  let novoCurso =  {margin: 5, width: 400, height: 89};
+  let lf =  {margin: 5, width: 400, height: 89};
   return (
      <section className="addCurso">
       <br/>
@@ -20,11 +22,11 @@ function FormularioCursos({eventoRedraw}) {
         <li><label> Nome do curso: </label> <input type="text" id="novo-Titulo"/></li>
         <li><label> Novo ID: </label> <input type="number" id="novoID"/> </li>
         <li><label> Imagem: </label> <input type="file" id="nova-Img"/></li>
-        <li><label> Descrição: </label> <textarea id="novo-Descricao" name="descricao" style={novoCurso}> </textarea></li>
+        <li><label> Descrição: </label> <textarea id="novo-Descricao" name="descricao" style={lf}> </textarea></li>
       </ul>
       
       <br/>
-      <button className="btnEnviar" onClick={evt}> Adicionar </button>
+      <button className="btnEnviar" onClick={adicionar}> Adicionar </button>
       <button className="btnCancelar" onClick={cancelar}> Cancelar </button>
       </section>
     );

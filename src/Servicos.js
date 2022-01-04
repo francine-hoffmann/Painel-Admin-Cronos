@@ -1,6 +1,8 @@
 import FormularioCursos from './FormularioCursos';
+import FormularioEditar from './FormularioEditar';
 import ListaCursos from './ListaCursos';
 import React from 'react';
+
 
 export default class Servicos extends React.Component {
     state = {
@@ -30,11 +32,15 @@ export default class Servicos extends React.Component {
             <h3>Serviços</h3>
             <button className="btn-primary" onClick={this.exibirFormulario}> Adicionar novo </button>
               <FormularioCursos eventoRedraw={this.redraw}/>
-              <ListaCursos />
+              <FormularioEditar eventoRedraw={this.redraw}/>
+              <ListaCursos eventoRedraw={this.redraw}/>              
+
             </div>
           </div>
         </div>
       </section>
     )
   }
-} 
+}
+
+

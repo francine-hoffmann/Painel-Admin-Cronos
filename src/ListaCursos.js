@@ -1,7 +1,7 @@
 import Curso from './Curso'
-import Cursos from './CrudUtils'
-function ListaCursos(){
-    const cursos = localStorage.getItem('cursos') ? JSON.parse(localStorage.getItem('cursos')) : require('./cursos.json');
+
+function ListaCursos({eventoRedraw}){
+    var cursos = JSON.parse(localStorage.getItem('cursos'));
     return(
         <table className="table my-5">
             <thead>
@@ -14,7 +14,7 @@ function ListaCursos(){
             </thead>
             <tbody>
             {cursos.map((curso, i) => {
-                return (<Curso key={i} nome={curso.nome} imagem={curso.imagem} descricao={curso.descricao} id={i}/>)
+                return (<Curso key={i} nome={curso.nome} imagem={curso.imagem} descricao={curso.descricao} id={curso.id} eventoRedraw={eventoRedraw}/>)
             })}
             </tbody>
         </table>
