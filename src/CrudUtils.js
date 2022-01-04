@@ -41,7 +41,8 @@ export function editarCurso(){
     localStorage.setItem('cursos', JSON.stringify(cursos));
 }
 
-export function deletarCurso({id}){
+export function deletarCurso(id){
+    console.log(id);
     let curso = cursos.find(c => c.id == id);
     if (!curso){
         console.error("Curso não encontrado");
@@ -52,4 +53,6 @@ export function deletarCurso({id}){
     cursos.splice(index, 1);
     localStorage.setItem('cursos', JSON.stringify(cursos));
 }
+
+export default deletarCurso
 

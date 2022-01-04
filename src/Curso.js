@@ -1,4 +1,6 @@
-function Curso({nome,imagem,descricao,id}){
+import deletarCurso from './CrudUtils';
+
+function Curso({nome,imagem,descricao,id,eventoRedraw}){
     const exibirFormularioEdicao = () => {
         let editarCurso = document.querySelector(".editarCurso");
         editarCurso.style.display = "block";  
@@ -6,15 +8,22 @@ function Curso({nome,imagem,descricao,id}){
         document.querySelector("#editar-id").value = id;
         document.querySelector("#editar-descricao").value = descricao;
     }
+    
+
+    const deletar = () => {
+        deletarCurso(id);
+        eventoRedraw();
+    }
+    
 
     return(
         <tr name={id}>
             <td>{nome}</td>
-            <td><img src={imagem} className="img-fluid" /></td>
+            <td><img src={imagem} className="img-fluid"/></td>
             <td>{descricao}</td>
             <td>
-                <button className="btnEditar" onClick={exibirFormularioEdicao}>editar</button>
-                <button className="btnExcluir" >excluir</button>
+                <button className="btnEditar" onClick={exibirFormularioEdicao}> editar</button>
+                <button className="btnExcluir" onClick={deletar}> excluir</button>
             </td>
         </tr>
     )

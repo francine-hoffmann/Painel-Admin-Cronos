@@ -33,7 +33,7 @@ export default class Servicos extends React.Component {
             <button className="btn-primary" onClick={this.exibirFormulario}> Adicionar novo </button>
               <FormularioCursos eventoRedraw={this.redraw}/>
               <FormularioEditar eventoRedraw={this.redraw}/>
-              <ListaCursos />
+              <ListaCursos eventoRedraw={this.redraw}/>              
 
             </div>
           </div>
@@ -41,6 +41,6 @@ export default class Servicos extends React.Component {
       </section>
     )
   }
+}
 
-  export default Servicos;
-  
+

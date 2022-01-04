@@ -1,6 +1,6 @@
 import Curso from './Curso'
 
-function ListaCursos(){
+function ListaCursos({eventoRedraw}){
     var cursos = JSON.parse(localStorage.getItem('cursos'));
     return(
         <table className="table my-5">
@@ -14,7 +14,7 @@ function ListaCursos(){
             </thead>
             <tbody>
             {cursos.map((curso, i) => {
-                return (<Curso key={i} nome={curso.nome} imagem={curso.imagem} descricao={curso.descricao} id={curso.id}/>)
+                return (<Curso key={i} nome={curso.nome} imagem={curso.imagem} descricao={curso.descricao} id={curso.id} eventoRedraw={eventoRedraw}/>)
             })}
             </tbody>
         </table>
