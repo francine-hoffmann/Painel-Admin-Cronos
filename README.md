@@ -1,4 +1,5 @@
-# Projeto Agencia CRONOS
+# Projeto Agência CRONOS
+
 
 <section class="descricao">
   <h2> :arrow_forward: Descrição </h2>
@@ -14,38 +15,56 @@
 </section>
     <br/>
 
+
 <section class="status">
   <h2> :arrow_forward: Status do Projeto </h2>
   <p>  :checkered_flag: Status do projeto: Finalizado :end: </p>
 </section>
-    <br/>
 
 <section>
   <h2> :arrow_forward: Funcionalidades do projeto </h2> 
-   
-     - Funcionalidade 1 : Botão Adicionar Novo: Permite que o usuário insira um novo curso na pagina. O usuário deve preencher os dados do novo curso e adicionar uma imagem a partir de uma url. </li>
-      <li> Funcionalidade 2 > Botão Editar: O usuário pode editar um curso existente. Pode ser alterado nome do curso, descrição e imagem. </li>
-      <li> Funcionalidade 3 > Botão Excluir: O usuário pode excluir o curso da página. </li>
- </section
-     <br/>
-      
+    <ol>
+      <li> Carregamento dinâmico: Os cursos são carregados à partir de um arquivo JSON. </li>
+      <li> Botão Adicionar Novo: Permite que o usuário insira um novo curso na pagina. O usuário deve preencher os dados do novo curso e adicionar uma imagem a partir de uma url. </li>
+      <li> Botão Editar: O usuário pode editar um curso existente. Podendo alterar o nome do curso, descrição e imagem. </li>
+      <li> Botão Excluir: O usuário pode excluir o curso da página. </li>
+      <li> Modal: Os formulários de criação e edição de cursos são exibidos como modal </li>
+    </ol>
+</section>
+
 <section class="ferramentas">
   <h2> :arrow_forward: Tecnologias utilizadas </h2>
-    <ul>
-      <li> HTML </li>
-      <li> CSS </li>
-      <li> Java Script </li>
-      <li> React </li>
+  <ul>
+    <li> React </li>
+    <li> HTML </li>
+    <li> CSS </li>
+    <li> JavaScript </li>
+  </ul>
+</section>
+
+
+<section class="howto">
+  <h2> :arrow_forward: Como utilizar </h2>
+  <p>Faça o clone do projeto:
+
+  ``` git clone https://github.com/francine-hoffmann/Painel-Admin-Cronos.git ```
+  
+  Instale todas as dependências do projeto:
+  
+  ``` npm install ```
+
+  Inicie o servidor web:
+  
+  ``` npm start ```
+  </p>
 
 </section>
-<br/>
 
 <section class="autores">
   <h2> Autoras </h2>
-  <div>
     
-| [<img src="https://user-images.githubusercontent.com/88943268/148317758-ae405a0d-8b5f-455a-9944-46334e378815.jp" width=115><br><sub>Francine Hoffmann</sub>](https://github.com/francine-hoffmann) | [<img src="https://user-images.githubusercontent.com/88943268/148317763-0f02b909-0919-4418-94a5-ea5ae0314af8.jpg" width=115><br><sub>Larissa Lopes</sub>](https://github.com/larysslopes) |
-| :---: | :---: | :---: |
+| [<img src="https://user-images.githubusercontent.com/88943268/148317758-ae405a0d-8b5f-455a-9944-46334e378815.jpg" width=115><br><sub>Francine Hoffmann</sub>](https://github.com/francine-hoffmann) | [<img src="https://user-images.githubusercontent.com/88943268/148317763-0f02b909-0919-4418-94a5-ea5ae0314af8.jpg" width=115><br><sub>Larissa Lopes</sub>](https://github.com/larysslopes) |
+| :---: | :---: | 
    
-  </div>
 </section>
+
