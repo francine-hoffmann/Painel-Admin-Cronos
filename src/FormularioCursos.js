@@ -1,34 +1,49 @@
 import {criarCurso} from './CrudUtils';
+import Modal from 'react-bootstrap/Modal';
+import { useState } from "react";
 
 function FormularioCursos({eventoRedraw}) {
+  const [exibir, setExibir] = useState(false);
+
   const adicionar = () => {
     criarCurso();
     eventoRedraw();
-    let addCursoForm = document.querySelector(".addCurso");
-    addCursoForm.style.display = "none";
+    setExibir(false);
   }
 
-  const cancelar = () => {
-    let addCursoForm = document.querySelector(".addCurso");
-    addCursoForm.style.display = "none";
+  const cancelar = () => setExibir(false);
+
+  const exibirModal = () => setExibir(true);
+
+  const imagemAlterada = () => {
+    document.querySelector("#img-display").src = document.querySelector("#nova-Img").value;
   }
 
-  let lf =  {margin: 5, width: 400, height: 89};
+  let lf =  {width: 400, height: 100};
+  let lf2 = {maxWidth: 400};
   return (
-     <section className="addCurso">
-      <br/>
-      <h6> Adicionar novo curso </h6>
-      <ul className="cadastroCurso">
-        <li><label> Nome do curso: </label> <input type="text" id="novo-Titulo"/></li>
-        <li><label> Novo ID: </label> <input type="number" id="novoID"/> </li>
-        <li><label> Imagem: </label> <input type="file" id="nova-Img"/></li>
-        <li><label> Descrição: </label> <textarea id="novo-Descricao" name="descricao" style={lf}> </textarea></li>
-      </ul>
+    <div>
+      <button className="btn-primary" onClick={exibirModal}> Adicionar novo </button>
       
-      <br/>
-      <button className="btnEnviar" onClick={adicionar}> Adicionar </button>
-      <button className="btnCancelar" onClick={cancelar}> Cancelar </button>
-      </section>
+      <Modal show={exibir} onHide={cancelar} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Adicionar novo curso</Modal.Title>
+        </Modal.Header>
+        <Modal.Body> 
+          <ul className="cadastroCurso">
+            <li><label> Nome do curso: </label> <input type="text" id="novo-Titulo"/></li>
+            <li><label> Id: </label> <input type="number" id="novoID"/> </li>
+            <li><label> Imagem: </label> <input type="text" id="nova-Img" onChange={imagemAlterada}/></li>
+            <li><label> Preview: </label> <img id="img-display"style={lf2}></img></li>
+            <li><label> Descrição: </label> <textarea id="novo-Descricao" name="descricao" style={lf}> </textarea></li>
+          </ul>
+        </Modal.Body>
+        <Modal.Footer>
+          <button className="btnEnviar" onClick={adicionar}> Adicionar </button>
+          <button className="btnCancelar" onClick={cancelar}> Cancelar </button>
+        </Modal.Footer>
+      </Modal>
+    </div>
     );
   }
   
