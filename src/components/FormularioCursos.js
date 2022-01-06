@@ -1,6 +1,6 @@
 import {criarCurso} from '../utils/CrudUtils';
 import Modal from 'react-bootstrap/Modal';
-import { useState } from "react";
+import { useState } from 'react';
 
 function FormularioCursos({eventoRedraw}) {
   const [exibir, setExibir] = useState(false);

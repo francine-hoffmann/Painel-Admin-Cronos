@@ -1,6 +1,6 @@
 import {editarCurso,deletarCurso} from '../utils/CrudUtils';
 import Modal from 'react-bootstrap/Modal';
-import { useState } from "react";
+import { useState } from 'react';
 
 function Curso({nome,imagem,descricao,id,eventoRedraw}){
     const [exibir, setExibir] = useState(false);

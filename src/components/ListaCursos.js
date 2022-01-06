@@ -1,7 +1,7 @@
 import Curso from './Curso'
 
 function ListaCursos({eventoRedraw}){
-    var cursos = JSON.parse(localStorage.getItem('cursos'));
+    var cursos = localStorage.getItem('cursos') ? JSON.parse(localStorage.getItem('cursos')) : require('../utils/cursos.json');
     return(
         <table className="table my-5">
             <thead>
