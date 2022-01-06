@@ -15,7 +15,12 @@ function FormularioCursos({eventoRedraw}) {
 
   const exibirModal = () => setExibir(true);
 
-  let lf =  {width: 400, height: 89};
+  const imagemAlterada = () => {
+    document.querySelector("#img-display").src = document.querySelector("#nova-Img").value;
+  }
+
+  let lf =  {width: 400, height: 100};
+  let lf2 = {maxWidth: 400};
   return (
     <div>
       <button className="btn-primary" onClick={exibirModal}> Adicionar novo </button>
@@ -28,7 +33,8 @@ function FormularioCursos({eventoRedraw}) {
           <ul className="cadastroCurso">
             <li><label> Nome do curso: </label> <input type="text" id="novo-Titulo"/></li>
             <li><label> Id: </label> <input type="number" id="novoID"/> </li>
-            <li><label> Imagem: </label> <input type="file" id="nova-Img"/></li>
+            <li><label> Imagem: </label> <input type="text" id="nova-Img" onChange={imagemAlterada}/></li>
+            <li><label> Preview: </label> <img id="img-display"style={lf2}></img></li>
             <li><label> Descrição: </label> <textarea id="novo-Descricao" name="descricao" style={lf}> </textarea></li>
           </ul>
         </Modal.Body>

@@ -22,17 +22,21 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
         document.querySelector("#editar-titulo").value = nome;
         document.querySelector("#editar-id").value = id;
         document.querySelector("#editar-descricao").value = descricao;
+        document.querySelector("#editar-img").value = imagem;
+        document.querySelector("#img-display").src = imagem;
     }
-    
-
+  
     const deletar = () => {
         deletarCurso(id);
         eventoRedraw();
     }
-    
 
-    let lf =  {width: 400, height: 89};
+    const imagemAlterada = () => {
+      document.querySelector("#img-display").src = document.querySelector("#editar-img").value;
+    }
 
+    let lf =  {width: 400, height: 100};
+    let lf2 = {maxWidth: 400};
     return(
             <tr name={id}>
                 <td>{nome}</td>
@@ -51,7 +55,8 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
                     <ul className="cadastroCurso">
                       <li><label> Nome do curso: </label> <input type="text" id="editar-titulo" placeholder={nome}/></li>
                       <li><label> Id: </label> <input type="number" id="editar-id" readOnly value={id}/> </li>
-                      <li><label> Imagem: </label> <input type="file" id="editar-img"/></li>
+                      <li><label> Imagem: </label> <input type="text" id="editar-img" onChange={imagemAlterada}/></li>
+                      <li><label> Preview: </label> <img id="img-display"style={lf2}></img></li>
                       <li><label> Descrição: </label> <textarea id="editar-descricao" name="descricao" style={lf} placeholder={descricao}> </textarea></li>
                     </ul>
                   </Modal.Body>
