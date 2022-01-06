@@ -1,5 +1,4 @@
 import FormularioCursos from './FormularioCursos';
-import FormularioEditar from './FormularioEditar';
 import ListaCursos from './ListaCursos';
 import React from 'react';
 
@@ -13,16 +12,6 @@ export default class Servicos extends React.Component {
       this.setState(this.state);
     };
 
-    exibirFormulario = () => {
-      let addCurso = document.querySelector(".addCurso");
-
-      if(addCurso.style.display === "block") {
-          addCurso.style.display = "none";
-      } else {
-          addCurso.style.display = "block";
-      }
-    }
-
     render() {
       return (
         <section id="servicos" className="py-5 mb-5">
@@ -30,11 +19,8 @@ export default class Servicos extends React.Component {
           <div className="row">
             <div className="col">
             <h3>Serviços</h3>
-            <button className="btn-primary" onClick={this.exibirFormulario}> Adicionar novo </button>
               <FormularioCursos eventoRedraw={this.redraw}/>
-              <FormularioEditar eventoRedraw={this.redraw}/>
-              <ListaCursos eventoRedraw={this.redraw}/>              
-
+              <ListaCursos eventoRedraw={this.redraw}/>   
             </div>
           </div>
         </div>
