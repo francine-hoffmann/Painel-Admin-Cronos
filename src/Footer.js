@@ -1,11 +1,14 @@
 
 function Footer() {
     return (
-        <footer className="py-3 bg-light">
+        <footer className="rodape">
         <div className="container text-center">
           <p className="m-0">
-            copyright 2021
-            <img src="imagens/favicon.png" width="30" alt="" /> agência CRONOS
+          Copyright © 2021 - Agência CRONOS
+          </p>
+          <p className="linkRodape">
+            Desenvolvido por <a href="https://github.com/francine-hoffmann"> Francine Hoffmann
+ </a> & <a href="https://github.com/larysslopes"> Larissa Lopes </a>
           </p>
         </div>
       </footer>
