@@ -30,7 +30,6 @@ function FormularioCursos({eventoRedraw}) {
         <Modal.Body> 
           <ul className="cadastroCurso">
             <li><label> Nome do curso: </label> <input type="text" id="novo-Titulo"/></li>
-            <li><label> Id: </label> <input type="number" id="novoID"/> </li>
             <li><label> Imagem: </label> <input type="text" id="nova-Img" onChange={imagemAlterada}/></li>
             <li><label> Preview: </label> <img id="img-preview" class="img-preview"></img></li>
             <li><label> Descrição: </label> <textarea id="novo-Descricao" name="descricao" class="descricao-form"> </textarea></li>
