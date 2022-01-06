@@ -49,7 +49,7 @@
   
   ``` npm install ```
 
-  Inicie o servidor web
+  Inicie o servidor web:
   
   ``` npm start ```
   </p>
