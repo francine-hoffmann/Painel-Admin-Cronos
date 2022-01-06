@@ -6,7 +6,7 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
     const [exibir, setExibir] = useState(false);
 
     const salvar = () => {
-      editarCurso();
+      editarCurso(id);
       eventoRedraw();
       setExibir(false);
     }
@@ -20,7 +20,6 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
 
     const carregarDados = () => {
         document.querySelector("#editar-titulo").value = nome;
-        document.querySelector("#editar-id").value = id;
         document.querySelector("#editar-descricao").value = descricao;
         document.querySelector("#editar-img").value = imagem;
         document.querySelector("#img-preview").src = imagem;
@@ -52,7 +51,6 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
                   <Modal.Body> 
                     <ul className="cadastroCurso">
                       <li><label> Nome do curso: </label> <input type="text" id="editar-titulo" placeholder={nome}/></li>
-                      <li><label> Id: </label> <input type="number" id="editar-id" readOnly value={id}/> </li>
                       <li><label> Imagem: </label> <input type="text" id="editar-img" onChange={imagemAlterada}/></li>
                       <li><label> Preview: </label> <img id="img-preview" class="img-preview"></img></li>
                       <li><label> Descrição: </label> <textarea id="editar-descricao" name="descricao" class="descricao-form" placeholder={descricao}> </textarea></li>

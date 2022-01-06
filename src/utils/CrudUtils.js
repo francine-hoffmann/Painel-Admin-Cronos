@@ -3,7 +3,6 @@ const cursos = localStorage.getItem('cursos') ? JSON.parse(localStorage.getItem(
 export function criarCurso(){
     // input
     let nome = document.querySelector("#novo-Titulo").value;
-    let id = document.querySelector("#novoID").value;
     let imagem = document.querySelector("#nova-Img").value;
     let descricao = document.querySelector("#novo-Descricao").value;
 
@@ -11,14 +10,13 @@ export function criarCurso(){
         'nome': nome,
         'imagem': imagem,
         'descricao': descricao,
-        'id': id
+        'id': cursos.length+1
     });
 
     localStorage.setItem('cursos', JSON.stringify(cursos));
 }
 
-export function editarCurso(){
-    let id = document.querySelector("#editar-id").value;
+export function editarCurso(id){
     let curso = cursos.find(c => c.id == id);
     if (!curso){
         console.error("Curso não encontrado.");
@@ -54,6 +52,4 @@ export function deletarCurso(id){
     cursos.splice(index, 1);
     localStorage.setItem('cursos', JSON.stringify(cursos));
 }
-
-export default deletarCurso
 
