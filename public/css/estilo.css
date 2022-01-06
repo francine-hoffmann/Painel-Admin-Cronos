@@ -86,3 +86,12 @@ table img {
     width: 220px;
     border: 1px solid #ccc;
 }
+
+.img-preview {
+    max-width: 400px;
+}
+
+.descricao-form {
+    width: 400px;
+    height: 100px;
+}

@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import './Header';
-import Header from './Header';
-import Footer from './Footer';
-import Servicos from './Servicos';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Servicos from './components/Servicos';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +20,5 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-//Importando arquivo json
-//Armazena no LocalStorage
-localStorage.setItem('cursos', JSON.stringify(require('./cursos.json')));
+//Importando arquivo json para armazenar no LocalStorage
+localStorage.setItem('cursos', JSON.stringify(require('./utils/cursos.json')));

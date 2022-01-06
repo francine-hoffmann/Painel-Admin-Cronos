@@ -1,4 +1,4 @@
-import {criarCurso} from './CrudUtils';
+import {criarCurso} from '../utils/CrudUtils';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from "react";
 
@@ -16,11 +16,9 @@ function FormularioCursos({eventoRedraw}) {
   const exibirModal = () => setExibir(true);
 
   const imagemAlterada = () => {
-    document.querySelector("#img-display").src = document.querySelector("#nova-Img").value;
+    document.querySelector("#img-preview").src = document.querySelector("#nova-Img").value;
   }
 
-  let lf =  {width: 400, height: 100};
-  let lf2 = {maxWidth: 400};
   return (
     <div>
       <button className="btn-primary" onClick={exibirModal}> Adicionar novo </button>
@@ -34,8 +32,8 @@ function FormularioCursos({eventoRedraw}) {
             <li><label> Nome do curso: </label> <input type="text" id="novo-Titulo"/></li>
             <li><label> Id: </label> <input type="number" id="novoID"/> </li>
             <li><label> Imagem: </label> <input type="text" id="nova-Img" onChange={imagemAlterada}/></li>
-            <li><label> Preview: </label> <img id="img-display"style={lf2}></img></li>
-            <li><label> Descrição: </label> <textarea id="novo-Descricao" name="descricao" style={lf}> </textarea></li>
+            <li><label> Preview: </label> <img id="img-preview" class="img-preview"></img></li>
+            <li><label> Descrição: </label> <textarea id="novo-Descricao" name="descricao" class="descricao-form"> </textarea></li>
           </ul>
         </Modal.Body>
         <Modal.Footer>
