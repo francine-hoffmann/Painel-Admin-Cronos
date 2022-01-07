@@ -57,7 +57,17 @@ a {
 }
 
 .menu:hover{
-    color:rgb(0, 5, 32)
+    color:#00444d;
+}
+
+.modal {
+     background-color: #00222554; 
+
+}
+
+
+button:focus{
+    outline: none;
 }
 
 .btn-primary,
@@ -67,16 +77,32 @@ a {
     border-color: #0097A7;
     text-transform: uppercase;
     margin: 10px 0;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btnEditar:hover,
+.btnEnviar:hover {
+    background-color: #00515a;
+
 }
 
 .btnCancelar,
 .btnExcluir {
-    background-color: #e90606;
-    border-color: #ca17179f;
+    background-color: #ff2626c9;
+    border-color: #d62c2c9f;
     text-transform: uppercase;
     margin: 0px 10px;
+    color: #fff;
 
 }
+
+.btnCancelar:hover,
+.btnExcluir:hover {
+    background-color: #7e0606;
+}
+
+
 .cadastroCurso {
     display: flex;
     flex-direction: column;
@@ -105,16 +131,27 @@ table img {
 
 
 .rodape {
-    background-color: #0097A7;
-    padding: 20px;
+    background-color: #BDBDBD;
+    padding: 25px;
 }
 
 
 
 .linkRodape a {
-  color:rgb(2, 0, 10);
+  color:#00444d;
 
 }
+
+
+.img-preview {
+    max-width: 400px;
+}
+
+.descricao-form {
+    width: 400px;
+    height: 100px;
+}
+
 
 
 @media only screen and (max-width: 480px) {
@@ -127,7 +164,7 @@ table img {
     header img {
        width: 100px;
    } 
-
+;
    header h1 {
        font-size: 12px;
    }

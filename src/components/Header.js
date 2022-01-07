@@ -8,7 +8,7 @@ function Header() {
           </a>
           <h1>Painel administrativo</h1>
         
-          <a href="#" className="menu"> Minha Conta </a>
+          <a href="#" className="menu"> <strong> Minha Conta </strong></a>
         </div>
       </header>
     );

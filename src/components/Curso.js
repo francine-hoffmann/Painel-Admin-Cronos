@@ -53,7 +53,7 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
               
               <Modal show={exibir} onHide={cancelar} onShow={carregarDados} centered>
                 <Modal.Header closeButton>
-                  <Modal.Title>Editar curso</Modal.Title>
+                  <Modal.Title><h4> Editar curso </h4> </Modal.Title>
                 </Modal.Header>
                 <Modal.Body> 
                   <ul className="cadastroCurso">
@@ -72,7 +72,7 @@ function Curso({nome,imagem,descricao,id,eventoRedraw}){
               
               <Modal show={exibirConfirmacao} onHide={cancelar} centered>
                 <Modal.Header closeButton>
-                  <Modal.Title>Confirmar exclusão</Modal.Title>
+                  <Modal.Title> <h4> Confirmar exclusão </h4> </Modal.Title>
                 </Modal.Header>
                 <Modal.Body> 
                   <p>Deseja realmente excluir o curso "{nome}"?</p>

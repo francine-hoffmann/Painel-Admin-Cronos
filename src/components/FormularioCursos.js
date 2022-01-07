@@ -25,7 +25,7 @@ function FormularioCursos({eventoRedraw}) {
       
       <Modal show={exibir} onHide={cancelar} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Adicionar novo curso</Modal.Title>
+          <Modal.Title> <h4> Adicionar novo curso </h4> </Modal.Title>
         </Modal.Header>
         <Modal.Body> 
           <ul className="cadastroCurso">
